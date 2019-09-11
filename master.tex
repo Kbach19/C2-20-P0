@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper,twoside,openright,danish]{book}
+
+% Variabler, som bruges til automatisk at indsætte titel, forfattere, osv. på
+% forsiden og titelbladet.
+\def \projecttitle       {Projekttitel}
+\def \projectsubtitle    {Projektundertitel}
+\def \projecttheme       {Projekttema}
+\def \projectdegree      {Matematik}  % eller Matematik-Økonomi/Teknologi
+\def \projectperiod      {Efterårssemesteret 20XX}
+\def \projectnumber      {P1}
+\def \projectgroup       {X123}
+\def \projectauthors     {
+  Projektforfatter 1\\
+  Projektforfatter 2\\
+  Projektforfatter 3\\
+  Projektforfatter 4
+  % ...
+}
+\def \projectsupervisors {
+  Projektvejleder 1\\
+  Projektvejleder 2
+  % ...
+}
+
+% Preamble
+\usepackage{aaumath}
+
+\begin{document}
+
+\frontmatter
+\include{incl/misc/frontpage}
+\include{incl/misc/titlepage}
+\include{incl/misc/contents}
+
+\mainmatter
+% \include{incl/main/example1}
+
+% Appendiks
+\begin{appendices}
+  % \include{incl/app/appendix1}
+\end{appendices}
+
+% Backmatter
+\backmatter
+
+% Litteraturliste
+\bibliographystyle{apalike}
+\bibliography{incl/bib/references}
+
+\end{document}
