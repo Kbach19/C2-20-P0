@@ -1,0 +1,39 @@
+\section{cos}
+Betragt nu cosinus funktionen $\cos(x)$. For at udlede Taylorudviklingen for $\cos(x)$, findes d. $k'$tte aflede af cosinus, ved brug af de trigonometriske relationer $\sin(x) = \cos(\frac{\pi}{2}-x)$ og $\cos(x) = cos(-x)$
+\begin{align*}
+    f(x) &= \cos(x)
+    \\f'(x) &= -\sin(x) = -\cos(\frac{\pi}{2}-x) = -\cos(x-\frac{\pi}{2})
+    \\f''(x) &= -\cos(x) = -\cos(x - 2\frac{\pi}{2})
+    \\f'''(x) &= \sin(x) = \cos(x - 3\frac{\pi}{2})
+    \\f^{(k)}(x) &= (-1)^{\lfloor N/4  \rfloor} cos(x- k\frac{\pi}{2}) 
+\end{align*}
+Der næst indsættes de aflede funktioner ind i forskriften for Taylorudviklingen (\ref{polynomiet}), og $x_0$ sættes til at være lig nul. Hvor efter at det bruges at %$\cos(0+n(3\pi/2))=0$ og
+$\cos(0-n\pi)=(-1)^n$
+\begin{align*}
+    p_N (x) &= \cos(0) - \cos(0 - \frac{\pi}{2})(x-0) - \cos(0 - 2\frac{\pi}{2})\frac{(x-0)^2}{2!} + ... + (-1)^{l} cos(0- N\frac{\pi}{2}) 
+    \\& =  1 - \frac{x^2}{2!} ... + (-1)^{\lfloor N/4  \rfloor} \cos( N\frac{\pi}{2})\frac{x^N}{N!}
+    \\&=\sum_{n=0}^{\lfloor N/2 \rfloor} \frac{(-1)^n}{(2n)!}x^{2n}
+\end{align*}
+Dermed er Taylorudviklingen for $\cos(x)$ med $N+1$ led og $x_0 = 0$ er givet ved
+\begin{align}
+   p_{N,\cos} (x) =\sum_{n=0}^{\lfloor N/2 \rfloor} \frac{(-1)^n}{(2n)!}x^{2n}
+\end{align}
+
+\begin{table}[h]
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+     $x$ & $\cos(x)$ & $p_{2}(x)$& $R_{2}(x)$ & $p_{4}(x)$& $R_{4}(x)$& $p_{6}(x)$& $R_{6}(x)$& $p_{8}(x)$& $R_{8}(x)$  \\
+     \hline
+     0 & 1& 1& 0& 1 & 0& 1& 0 & 1& 0
+     \\ $\pi/6$ & 
+     \\ $\pi/4$ &
+     \\ $\pi/3$&
+     \\ $\pi/2$ &
+     \\ $2\pi/3$&
+     \\ $3\pi/4$ &
+     \\ $4\pi/5$ &
+     \\ $\pi$ &
+     \end{tabular}
+    \caption{SOmething something}
+    \label{tab:R_N_COS}
+\end{table}
+\newpage
